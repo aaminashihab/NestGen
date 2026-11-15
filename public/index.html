@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LabelProof · Verify Before You Print</title>
+  <meta name="description" content="AI-assisted bilingual food-label verification for imported food brands in the UAE. Identify potential Arabic-English label inconsistencies before your packaging goes to print.">
+  <meta name="theme-color" content="#F6F3EA">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter+Tight:wght@700;800;900&family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=5">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ 1. NAVIGATION ============ -->
+<header class="nav" id="top">
+  <div class="wrap nav__inner">
+    <a class="logo" href="#top" aria-label="LabelProof — home">
+      <img src="/assets/logo-mark.svg" alt="" width="31" height="40">
+      <span>LabelProof</span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--primary btn--sm nav__cta-mobile" href="#pilot">Join the Pilot</a>
+    </nav>
+    <a class="btn btn--primary btn--sm nav__cta" href="#pilot">Join the Pilot</a>
+    <button class="nav__toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 2. HERO ============ -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">Hypothesis-stage concept · Pilot programme open</p>
+      <h1 class="display">Two languages.<br>One verified label.</h1>
+      <p class="hero__lead">Identify potential Arabic-English food-label inconsistencies <em>before</em> your packaging goes to print.</p>
+      <p class="hero__sub">AI-assisted bilingual food-label verification for imported food brands in the UAE.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#pilot">Join the Pilot Programme</a>
+        <a class="btn btn--ghost" href="#how-it-works">See How It Works</a>
+      </div>
+      <div class="lang-pills" aria-hidden="true">
+        <span class="pill pill--en">English</span>
+        <span class="pill pill--ar" lang="ar">العربية</span>
+        <span class="pill pill--ok">✓ Verified before print</span>
+      </div>
+    </div>
+
+    <figure class="hero__visual" aria-label="Fictional packaged-food product with English and Arabic artwork">
+      <div class="hero__disc"></div>
+      <div class="box">
+        <div class="box__en">Almond<br>Bites</div>
+        <div class="box__ar" lang="ar" dir="rtl">لوز</div>
+      </div>
+      <div class="pouch">
+        <div class="pouch__seal"></div>
+        <p class="pouch__brand">Oakfield Pantry</p>
+        <div class="pouch__en">
+          <strong>Date &amp; Almond Clusters</strong>
+          <small>Net wt 250 g · Contains: Almonds</small>
+        </div>
+        <div class="pouch__ar" lang="ar" dir="rtl">
+          <strong>عناقيد التمر واللوز</strong>
+          <small>الوزن الصافي ٢٥٠ غ · يحتوي على: لوز</small>
+        </div>
+      </div>
+      <div class="hero__shadow"></div>
+      <figcaption>Fictional product shown for illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 3. PROBLEM ============ -->
+<section class="section problem" id="problem">
+  <div class="wrap">
+    <h2 class="headline">One packaging mistake.<br>Two different meanings.</h2>
+
+    <div class="problem__grid">
+      <div class="problem__copy">
+        <p class="lead">Non-Arabic-speaking founders may struggle to independently verify whether their Arabic packaging matches their English artwork and product information.</p>
+        <ol class="numbered">
+          <li><span>1</span>Translation inconsistencies</li>
+          <li><span>2</span>Ingredient and allergen discrepancies</li>
+          <li><span>3</span>Missing or inconsistent product information</li>
+        </ol>
+        <p class="kicker">Possible consequences</p>
+        <ul class="consequences">
+          <li>Reprints</li>
+          <li>Launch delays</li>
+          <li>Additional costs</li>
+        </ul>
+      </div>
+
+      <div class="compare">
+        <div class="compare__panels">
+          <div class="art">
+            <div class="art__rule"></div>
+            <p class="art__brand">Oakfield Pantry</p>
+            <div class="art__face art__face--en">
+              <strong class="art__title">Date &amp; Almond Clusters</strong>
+              <mark class="art__flag">Contains: Peanuts</mark>
+              <small>Net wt 250 g</small>
+            </div>
+            <p class="art__says art__says--en">English says: <b>Peanuts</b></p>
+          </div>
+
+          <div class="neq" aria-label="does not match">≠</div>
+
+          <div class="art">
+            <div class="art__rule"></div>
+            <p class="art__brand">Oakfield Pantry</p>
+            <div class="art__face art__face--ar" lang="ar" dir="rtl">
+              <strong class="art__title">عناقيد التمر واللوز</strong>
+              <mark class="art__flag">يحتوي على لوز</mark>
+              <small>الوزن الصافي ٢٥٠ غ</small>
+            </div>
+            <p class="art__says art__says--ar">Arabic says: <b>Almonds</b></p>
+          </div>
+        </div>
+        <p class="note">Fictional, illustrative mismatch — requires review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. SOLUTION / DASHBOARD ============ -->
+<section class="section solution" id="solution">
+  <div class="wrap">
+    <div class="split-head">
+      <h2 class="headline">One verification layer before printing.</h2>
+      <div>
+        <p class="lead">LabelProof is a proposed workflow that compares three sources side by side and flags where they disagree.</p>
+        <ol class="sources">
+          <li><i class="dot dot--en"></i><span><b>01</b> English packaging artwork</span></li>
+          <li><i class="dot dot--ar"></i><span><b>02</b> Arabic packaging artwork</span></li>
+          <li><i class="dot dot--spec"></i><span><b>03</b> Supplied product specifications</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="app" id="demo">
+      <div class="app__bar">
+        <span class="app__dots"><i></i><i></i><i></i></span>
+        <span class="app__title">LabelProof · Label check LC-0042</span>
+        <span class="app__badge">Fictional demo</span>
+      </div>
+      <div class="app__body">
+        <aside class="app__side" aria-hidden="true">
+          <span>Projects</span>
+          <span class="is-active">Label checks</span>
+          <span>Findings</span>
+          <span>Reports</span>
+          <span>Version history</span>
+        </aside>
+        <div class="app__main">
+          <div class="app__head">
+            <h3>Oakfield Pantry — Date &amp; Almond Clusters</h3>
+            <div class="app__counts">
+              <span class="chip chip--amber">AI-flagged · <b id="count-ai">3</b> open</span>
+              <span class="chip chip--green">Human-reviewed · <b id="count-hr">1</b></span>
+            </div>
+          </div>
+          <div class="app__grid">
+            <div class="col col--en">
+              <p class="col__label">English artwork</p>
+              <div class="line" data-line="1"><em>L1</em>Date &amp; Almond Clusters</div>
+              <div class="line" data-line="2"><em>L2</em>Ingredients: Oats, dates, almonds, sugar</div>
+              <div class="line" data-line="3"><em>L3</em>Contains: Peanuts, Milk</div>
+              <div class="line" data-line="4"><em>L4</em>Net wt 250 g</div>
+            </div>
+            <div class="col col--ar" lang="ar" dir="rtl">
+              <p class="col__label" lang="en" dir="ltr">Arabic extracted</p>
+              <div class="line" data-line="1"><em>L1</em>عناقيد التمر واللوز</div>
+              <div class="line" data-line="2"><em>L2</em>المكونات: شوفان، تمر، لوز</div>
+              <div class="line" data-line="3"><em>L3</em>يحتوي على: لوز، حليب</div>
+              <div class="line line--missing" data-line="4"><em>L4</em><span lang="en" dir="ltr">— not found —</span></div>
+            </div>
+            <ul class="findings" aria-label="Findings — select one to see its evidence">
+              <li><button class="finding is-active" data-lines="3" data-status="ai">
+                <span class="finding__top"><i class="dot dot--amber"></i><b>Allergen mismatch</b><span class="tag tag--amber">AI-flagged</span></span>
+                <span class="finding__desc">Peanuts (EN) vs almonds (AR)</span>
+                <span class="finding__ev">Evidence: EN L3 ↔ AR L3</span>
+              </button></li>
+              <li><button class="finding" data-lines="2" data-status="ai">
+                <span class="finding__top"><i class="dot dot--amber"></i><b>Ingredient mismatch</b><span class="tag tag--amber">AI-flagged</span></span>
+                <span class="finding__desc">Sugar missing from Arabic list</span>
+                <span class="finding__ev">Evidence: EN L2 ↔ AR L2</span>
+              </button></li>
+              <li><button class="finding" data-lines="4" data-status="ai">
+                <span class="finding__top"><i class="dot dot--amber"></i><b>Missing information</b><span class="tag tag--amber">AI-flagged</span></span>
+                <span class="finding__desc">Net weight absent on Arabic label</span>
+                <span class="finding__ev">Evidence: EN L4 ↔ AR —</span>
+              </button></li>
+              <li><button class="finding" data-lines="3" data-status="hr">
+                <span class="finding__top"><i class="dot dot--green"></i><b>Milk declaration</b><span class="tag tag--green">Human-reviewed</span></span>
+                <span class="finding__desc">Consistent in both languages</span>
+                <span class="finding__ev">Evidence: EN L3 ↔ AR L3</span>
+              </button></li>
+            </ul>
+          </div>
+          <p class="app__foot">Compares Arabic packaging, English artwork and supplied product specifications. AI-generated findings are preliminary — only items marked <b>Human-reviewed</b> have been checked by a person. <b>Fictional demonstration data; this is not a live verification engine.</b></p>
+        </div>
+      </div>
+    </div>
+    <p class="note note--center">Select a finding to see the evidence it is linked to.</p>
+  </div>
+</section>
+
+<!-- ============ 5. HOW IT WORKS ============ -->
+<section class="section how" id="how-it-works">
+  <div class="wrap">
+    <h2 class="headline">From artwork to<br>actionable findings.</h2>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step__icon step__icon--dark">
+          <svg viewBox="0 0 24 24"><path d="M4 15.5a4.5 4.5 0 0 1 2.2-8.4A6 6 0 0 1 17.8 8 4 4 0 0 1 20 15.4"/><path d="M12 12v8M8.5 15.5 12 12l3.5 3.5"/></svg>
+        </span>
+        <span class="step__no">01</span>
+        <h3>Upload</h3>
+        <p>English artwork, Arabic artwork and product specifications.</p>
+      </li>
+      <li class="step">
+        <span class="step__icon step__icon--dark">
+          <svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2.5"/><path d="M12 4v16"/></svg>
+        </span>
+        <span class="step__no">02</span>
+        <h3>Extract and compare</h3>
+        <p>AI-assisted document processing and text comparison.</p>
+      </li>
+      <li class="step">
+        <span class="step__icon step__icon--amber">
+          <svg viewBox="0 0 24 24"><path d="M10.3 4.2 2.8 17.5A2 2 0 0 0 4.5 20.5h15a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4M12 17h.01"/></svg>
+        </span>
+        <span class="step__no">03</span>
+        <h3>Identify</h3>
+        <p>Highlight potential mismatches and missing information.</p>
+      </li>
+      <li class="step">
+        <span class="step__icon step__icon--green">
+          <svg viewBox="0 0 24 24"><circle cx="9.5" cy="8" r="3.5"/><path d="M3 20a6.5 6.5 0 0 1 11-4.7M15.5 18l2 2 4-4"/></svg>
+        </span>
+        <span class="step__no">04</span>
+        <h3>Human review</h3>
+        <p>Qualified Arabic food-label linguist and relevant regulatory specialist review.</p>
+      </li>
+      <li class="step">
+        <span class="step__icon step__icon--green">
+          <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+        </span>
+        <span class="step__no">05</span>
+        <h3>Report</h3>
+        <p>Receive a structured preliminary verification report.</p>
+      </li>
+    </ol>
+    <div class="phase">
+      <span class="phase__ai">AI-assisted · Steps 01–03</span>
+      <span class="phase__hr">Human-reviewed · Steps 04–05</span>
+    </div>
+    <p class="note">Pilot target: 24-hour turnaround — a proposed target to test, not a service guarantee.</p>
+  </div>
+</section>
+
+<!-- ============ 6. FEATURES ============ -->
+<section class="section features" id="features">
+  <div class="wrap">
+    <div class="split-head">
+      <h2 class="headline">Built for bilingual food-label verification.</h2>
+      <p class="lead">The capabilities we plan to test with pilot customers. <span class="status-legend"><span class="tag tag--sand">Planned</span> None of these features is a live product yet — the pilot exists to shape and validate them.</span></p>
+    </div>
+
+    <div class="feat-lead">
+      <article class="feat feat--big">
+        <div class="feat__vis feat__vis--claim" aria-hidden="true">
+          <div class="mini mini--en">Sugar-free · Natural flavours</div>
+          <div class="mini-link"><span>≠</span></div>
+          <div class="mini mini--ar" lang="ar" dir="rtl">قليل السكر · نكهات طبيعية</div>
+          <p class="mini-cap">“Sugar-free” vs “low sugar” — AI-flagged</p>
+        </div>
+        <div>
+          <span class="feat__no">01</span>
+          <h3>Arabic-English claim consistency checks</h3>
+          <p>Compare front-of-pack claims across both languages so a claim does not quietly change meaning in translation.</p>
+        </div>
+      </article>
+      <article class="feat feat--big">
+        <div class="feat__vis feat__vis--alg" aria-hidden="true">
+          <div class="alg-row"><span class="alg alg--en">Peanuts</span><span class="alg-x">↔</span><span class="alg alg--ar" lang="ar">لوز</span><span class="tag tag--amber">Review</span></div>
+          <div class="alg-row"><span class="alg alg--en">Milk</span><span class="alg-x">↔</span><span class="alg alg--ar" lang="ar">حليب</span><span class="tag tag--green">Match</span></div>
+          <div class="alg-row"><span class="alg alg--en">Sugar</span><span class="alg-x">↔</span><span class="alg alg--missing">— missing —</span><span class="tag tag--amber">Review</span></div>
+        </div>
+        <div>
+          <span class="feat__no">02 · 03</span>
+          <h3>Ingredient &amp; allergen discrepancy detection</h3>
+          <p>Line-by-line comparison of ingredient lists and allergen declarations against each other and against your product specification.</p>
+        </div>
+      </article>
+    </div>
+
+    <ul class="feat-list">
+      <li>
+        <span class="feat__no">04</span>
+        <h3>Missing information identification</h3>
+        <p>Spot details present in one language — net weight, storage, origin — but absent in the other.</p>
+      </li>
+      <li>
+        <span class="feat__no">05</span>
+        <h3>Evidence-linked findings</h3>
+        <p>Every finding points to the exact line on each artwork, e.g. <code>EN L3 ↔ AR L3</code>.</p>
+      </li>
+      <li>
+        <span class="feat__no">06</span>
+        <h3>Human review workflow</h3>
+        <p>AI-flagged findings are routed to qualified reviewers before they can be marked Human-reviewed.</p>
+      </li>
+      <li>
+        <span class="feat__no">07</span>
+        <h3>Packaging version history</h3>
+        <p>Keep each artwork revision per SKU so you can see what changed between proofs.</p>
+        <div class="versions" aria-hidden="true"><span>v1</span><span>v2</span><span class="is-cur">v3</span></div>
+      </li>
+      <li>
+        <span class="feat__no">08</span>
+        <h3>Downloadable preliminary reports</h3>
+        <p>A structured summary of findings and review status to share with your designer or printer.</p>
+      </li>
+      <li class="feat-cta">
+        <p class="kicker">Shape the roadmap</p>
+        <h3>Tell us which checks matter most for your next print run.</h3>
+        <a class="btn btn--light btn--sm" href="#pilot">Join the Pilot →</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 7. TRUST ============ -->
+<section class="section trust" id="trust">
+  <div class="wrap">
+    <h2 class="headline">AI-assisted.<br><span class="hl-green">Human-reviewed.</span></h2>
+    <p class="lead lead--narrow">Clear responsibilities at every step. AI does the first pass; qualified people decide what has actually been checked.</p>
+
+    <div class="roles">
+      <div class="role role--ai">
+        <span class="role__badge">AI</span>
+        <div>
+          <h3>AI-assisted processing</h3>
+          <p>Extracts, compares and identifies potential discrepancies between English artwork, Arabic artwork and product specifications.</p>
+        </div>
+        <span class="tag tag--amber">AI-flagged</span>
+      </div>
+      <div class="role role--hr">
+        <span class="role__badge">✓</span>
+        <div>
+          <h3>Arabic food-label linguist</h3>
+          <p>Reviews Arabic wording, meaning and consistency with the English artwork.</p>
+        </div>
+        <span class="tag tag--green">Human-reviewed</span>
+      </div>
+      <div class="role role--hr">
+        <span class="role__badge">✓</span>
+        <div>
+          <h3>Food regulatory specialist</h3>
+          <p>Reviews relevant regulatory concerns within their expertise and identifies matters requiring further confirmation. Does not grant approval.</p>
+        </div>
+        <span class="tag tag--green">Human-reviewed</span>
+      </div>
+    </div>
+
+    <div class="important">
+      <span class="important__tag">Important</span>
+      <p><b>LabelProof does not provide official regulatory certification or guarantee compliance.</b> Only findings actually reviewed by a person can display the <span class="tag tag--green">Human-reviewed</span> status.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="wrap about__grid">
+    <div>
+      <h2 class="headline">The founder shouldn’t have to guess what their packaging says.</h2>
+    </div>
+    <div class="about__body">
+      <p class="lead">LabelProof is a hypothesis-stage startup concept based in the UAE. We are exploring whether an independent, evidence-linked second check — AI-assisted and human-reviewed — helps founders print bilingual packaging with more confidence.</p>
+      <dl class="facts">
+        <div><dt>Who it’s for</dt><dd>Non-Arabic-speaking founders of small imported packaged-food brands in Dubai and Sharjah.</dd></div>
+        <div><dt>When it helps</dt><dd>Before launching a new product, adding a new SKU or redesigning packaging — just before the print run.</dd></div>
+        <div><dt>Where we are</dt><dd>No customers, pilots or revenue yet. We are recruiting our first pilot participants and qualified review partners.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="wrap faq__grid">
+    <h2 class="headline">Questions,<br>answered.</h2>
+    <div class="faq__list">
+      <details open>
+        <summary>What is LabelProof?</summary>
+        <p>LabelProof is a proposed AI-assisted, human-reviewed service that compares your English packaging artwork, Arabic packaging artwork and product specifications to identify potential inconsistencies before you print. It is currently at concept stage and being tested through a pilot programme.</p>
+      </details>
+      <details>
+        <summary>Who is it designed for?</summary>
+        <p>Primarily non-Arabic-speaking founders of small imported packaged-food brands in Dubai and Sharjah. We also want to hear from importers, distributors, packaging agencies, Arabic food-label linguists and food regulatory professionals.</p>
+      </details>
+      <details>
+        <summary>What documents can I submit?</summary>
+        <p>For the pilot we expect English packaging artwork, Arabic packaging artwork (print-ready PDF or high-resolution image) and your product specification sheet — ingredients, allergens, net weight and claims. Please don’t upload anything through this website; we will agree a secure way to share files with each pilot participant.</p>
+      </details>
+      <details>
+        <summary>Does LabelProof replace a translator?</summary>
+        <p>No. LabelProof is a verification layer that checks whether the two language versions say the same thing. It does not translate or write your Arabic copy, and it works alongside your translator and designer.</p>
+      </details>
+      <details>
+        <summary>Who performs human review?</summary>
+        <p>Qualified Arabic food-label linguists review Arabic wording, meaning and consistency, and food regulatory specialists review relevant regulatory concerns within their expertise. We are currently recruiting these review partners. Only findings actually reviewed by a person are shown as Human-reviewed.</p>
+      </details>
+      <details>
+        <summary>Does LabelProof guarantee UAE regulatory compliance?</summary>
+        <p>No. LabelProof provides preliminary verification support only. It does not provide official regulatory certification, approval or a guarantee of compliance. Matters requiring confirmation should be taken to the relevant authority or a qualified adviser.</p>
+      </details>
+      <details>
+        <summary>How can I join the pilot?</summary>
+        <p>Complete the <a href="#pilot">pilot registration form</a> below. We review every registration and contact selected founders and professionals by email to discuss next steps.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. PILOT ============ -->
+<section class="section pilot" id="pilot">
+  <div class="wrap pilot__grid">
+    <div class="pilot__intro">
+      <h2 class="headline">Help us make food-label verification easier.</h2>
+      <p class="lead">We are inviting selected food founders and industry professionals to help test the LabelProof concept.</p>
+      <p class="kicker">We especially want to hear from</p>
+      <ol class="numbered numbered--alt">
+        <li><span>1</span>Imported food-brand founders</li>
+        <li><span>2</span>Food importers and distributors</li>
+        <li><span>3</span>Packaging agencies</li>
+        <li><span>4</span>Qualified Arabic food-label linguists</li>
+        <li><span>5</span>Food regulatory professionals</li>
+      </ol>
+    </div>
+
+    <form class="form" id="pilot-form" novalidate>
+      <div class="form__head">
+        <img src="/assets/logo-mark.svg" alt="" width="28" height="36">
+        <p>Pilot registration</p>
+      </div>
+      <div class="field">
+        <label for="f-name">Full name</label>
+        <input id="f-name" name="fullName" type="text" autocomplete="name" required maxlength="120">
+      </div>
+      <div class="field">
+        <label for="f-email">Business email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="200">
+      </div>
+      <div class="field">
+        <label for="f-company">Company name</label>
+        <input id="f-company" name="company" type="text" autocomplete="organization" required maxlength="160">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-type">Business type</label>
+          <select id="f-type" name="businessType" required>
+            <option value="">Select…</option>
+            <option>Imported food brand</option>
+            <option>Food importer or distributor</option>
+            <option>Packaging or design agency</option>
+            <option>Arabic food-label linguist</option>
+            <option>Food regulatory professional</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-skus">Packaged-food SKUs</label>
+          <select id="f-skus" name="skuCount" required>
+            <option value="">Select…</option>
+            <option>None yet</option>
+            <option>1–5</option>
+            <option>6–20</option>
+            <option>21–50</option>
+            <option>50+</option>
+            <option>Not applicable</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-msg">Message <span class="opt">(optional)</span></label>
+        <textarea id="f-msg" name="message" rows="4" maxlength="2000" placeholder="Tell us about your products or a recent labelling challenge."></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-web">Website</label>
+        <input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <label class="consent">
+        <input type="checkbox" name="consent" required>
+        <span>I agree that LabelProof may store these details and contact me about the pilot programme.</span>
+      </label>
+      <button class="btn btn--primary btn--block" type="submit">Join the Pilot Programme</button>
+      <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 10. FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <a class="logo" href="#top" aria-label="LabelProof — back to top">
+        <img src="/assets/logo-mark.svg" alt="" width="31" height="40">
+        <span>LabelProof</span>
+      </a>
+      <p class="footer__tag"><span class="t-en">Verify before</span> <span class="t-ar">you print.</span></p>
+      <p class="footer__loc">Dubai · Sharjah · UAE</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <p class="kicker">Explore</p>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pilot">Join the Pilot</a>
+    </nav>
+    <div class="footer__contact">
+      <p class="kicker">Contact</p>
+      <p>Email: <span class="placeholder">hello@[your-domain]</span></p>
+      <p>LinkedIn: <span class="placeholder">[company page]</span></p>
+      <p>WhatsApp: <span class="placeholder">[+971 number]</span></p>
+    </div>
+  </div>
+  <div class="wrap footer__legal">
+    <p>LabelProof provides preliminary verification support, not official regulatory certification, approval or a guarantee of compliance. All products, brands and findings shown on this site are fictional and for illustration only.</p>
+    <p>© <span id="year">2026</span> LabelProof · Hypothesis-stage concept</p>
+  </div>
+</footer>
+
+<script src="/app.js?v=5" defer></script>
+</body>
+</html>

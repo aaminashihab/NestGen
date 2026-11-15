@@ -1,0 +1,11 @@
+{
+  "name": "labelproof",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LabelProof landing page and pilot registration backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=18" }
+}

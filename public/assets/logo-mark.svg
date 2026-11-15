@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 508" role="img" aria-label="LabelProof">
+  <defs><clipPath id="lp-doc"><rect width="394" height="508" rx="46"/></clipPath></defs>
+  <g clip-path="url(#lp-doc)">
+    <rect width="197" height="508" fill="#496DA8"/>
+    <rect x="197" width="197" height="508" fill="#78834A"/>
+  </g>
+  <g fill="#E4E8F0">
+    <rect x="38" y="71" width="116" height="20" rx="10"/>
+    <rect x="38" y="120" width="80" height="20" rx="10"/>
+    <rect x="38" y="169" width="102" height="20" rx="10"/>
+  </g>
+  <g fill="#E7E9DF">
+    <rect x="239" y="71" width="116" height="20" rx="10"/>
+    <rect x="274" y="120" width="81" height="20" rx="10"/>
+    <rect x="253" y="169" width="102" height="20" rx="10"/>
+  </g>
+  <circle cx="197" cy="366" r="123" fill="#F3F0E6"/>
+  <circle cx="197" cy="366" r="104" fill="#287B60"/>
+  <path d="M146 364 L183 401 L252 330" fill="none" stroke="#FAFBF8" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
